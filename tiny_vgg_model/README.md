@@ -21,7 +21,7 @@ source .venv/bin/activate
 ```
 
 
-**3. Install requirements**
+**4. Install requirements**
 
 ```bash
 uv pip install -r requirements.txt

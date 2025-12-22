@@ -84,7 +84,7 @@ def train():
     # Save the model with help from utils.py
     utils.save_model(model=model,
                      target_dir="models",
-                     model_name="05_going_modular_script_mode_tinyvgg_model.pth")
+                     model_name="tinyvgg_model.pth")
 
 
 if __name__ == '__main__':

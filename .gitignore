@@ -148,3 +148,7 @@ tiny_vgg_model/models/*.pth
 # Docs
 .cache
 mkdocs-material-insiders
+
+gpt-from-scratch/the-verdict.txt
+gpt-from-scratch/.venv
+gpt-from-scratch/models/*.pth
