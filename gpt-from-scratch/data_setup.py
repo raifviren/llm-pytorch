@@ -10,8 +10,6 @@ import logging
 
 from torch.utils.data import Dataset, DataLoader
 
-from config import GPT_CONFIG_124M
-
 logger = logging.getLogger()
 
 NUM_WORKERS = os.cpu_count()
@@ -71,6 +69,8 @@ def create_dataloader_v1(txt, batch_size=4, max_length=256,
 
 def create_dataloaders(
         batch_size: int = 2,
+        max_length=256,
+        stride=128,
         drop_last: bool = True,
         shuffle: bool = True,
         num_workers: int = NUM_WORKERS
@@ -81,8 +81,6 @@ def create_dataloaders(
     them into PyTorch Datasets and then into PyTorch DataLoaders.
 
     Args:
-      train_dir: Path to training directory.
-      test_dir: Path to testing directory.
       batch_size: Number of samples per batch in each of the DataLoaders.
       drop_last : drop last batch if it does not fit batch_size
       shuffle : shuffle the data
@@ -109,8 +107,8 @@ def create_dataloaders(
     train_dataloader = create_dataloader_v1(
         train_data,
         batch_size=batch_size,
-        max_length=GPT_CONFIG_124M["context_length"],
-        stride=GPT_CONFIG_124M["context_length"],
+        max_length=max_length,
+        stride=stride,
         drop_last=drop_last,
         shuffle=shuffle,
         num_workers=num_workers
@@ -119,8 +117,8 @@ def create_dataloaders(
     test_dataloader = create_dataloader_v1(
         test_data,
         batch_size=batch_size,
-        max_length=GPT_CONFIG_124M["context_length"],
-        stride=GPT_CONFIG_124M["context_length"],
+        max_length=max_length,
+        stride=stride,
         drop_last=False,
         shuffle=False,
         num_workers=num_workers

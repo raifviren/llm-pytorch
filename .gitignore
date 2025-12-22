@@ -151,3 +151,4 @@ mkdocs-material-insiders
 
 gpt-from-scratch/the-verdict.txt
 gpt-from-scratch/.venv
+gpt-from-scratch/models/*.pth
