@@ -152,3 +152,8 @@ mkdocs-material-insiders
 gpt-from-scratch/the-verdict.txt
 gpt-from-scratch/.venv
 gpt-from-scratch/models/*.pth
+
+reasoning-from-scratch/.venv
+reasoning-from-scratch/models/*.pth
+
+.idea/*
