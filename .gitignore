@@ -157,3 +157,6 @@ llama2-from-scratch/.venv
 llama2-from-scratch/models/*.pth
 
 .idea/*
+
+reasoning-from-scratch/.venv
+reasoning-from-scratch/models/*.pth
