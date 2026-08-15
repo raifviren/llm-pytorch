@@ -156,7 +156,12 @@ gpt-from-scratch/models/*.pth
 llama2-from-scratch/.venv
 llama2-from-scratch/models/*.pth
 
+
 .idea/*
+
+qwen3-from-scratch/.venv
+qwen3-from-scratch/models/*
+qwen3-from-scratch/Qwen3-0.6B-Base/*
 
 reasoning-from-scratch/.venv
 reasoning-from-scratch/models/*.pth
